@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: rgb(123, 115, 115);
+      color: black;
+    }
+
+    header {
+      background-color: rgb(52, 50, 50);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    #about img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      display: block;
+      margin: 0 auto 20px; /* Added margin to create space below the image */
+    }
+
+    .project {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .project img {
+      max-width: 400px; /* Adjust the maximum width of project images */
+      height: auto;
+      display: inline-block; /* Change display property to inline-block */
+      margin: 0 auto; /* Center the images */
+    }
+
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 60px;
+      padding: 20px;
+    }
+
+    .skill {
+      text-align: center;
+    }
+
+    .skill img {
+      width: 90px;
+      height: 70px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    #projects, #achievements {
+      margin: 20px;
+      padding: 20px;
+      border: 2px solid black; /* Add border to the projects and achievements sections */
+      border-radius: 10px; /* Optional: Add rounded corners */
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      margin: 20px; /* Add margin to the footer for consistency */
+      border: 2px solid #fff; /* Add border to the footer */
+      border-radius: 10px; /* Optional: Add rounded corners */
+    }
+
+    .resume-button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 10px;
+      color: #fff;
+      background-color: rgb(52, 50, 50);
+      text-decoration: none;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    .resume-button:hover {
+      background-color: gray;
+    }
+
+    /* Center the button using Flexbox */
+    #resume {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0; /* Optional: Add some margin for spacing */
+    }
+
+    #achievements {
+      text-align: center;
+    }
+
+    .achievement {
+      text-align: center;
+      margin-bottom: 20px;
+      gap:60px;
+    }
+
+    .achievement img {
+      max-width: 200px; /* Adjust the maximum width of achievement images */
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 10px; /* Optional: Add rounded corners to the images */
+    }
+  </style>
+</head>
+<body>
+<marquee direction="left" behavior="scroll" scrollamount="5">Welcome to my portfolio!</marquee>
+
+  <header>
+    <h1 style="text-decoration-color: #fff;">Hello! I'm Haritha Sai</h1>
+    <p>A Frontend Developer</p>
+  </header>
+  <h2 style="text-align:left;"> ABOUT</h2>
+  <section id="about">
+    <div class="About">
+    <img src="sai.png" alt="Haritha Sai">
+    <p style="text-align:center;">Greetings! I'm Haritha Sai, an enthusiastic learner with a burning passion for web development. Eager to dive into the dynamic world of coding, I'm on a journey to master the intricacies of HTML, CSS, JavaScript, and beyond. With each line of code, I embrace the challenge of transforming ideas into captivating digital experiences. I believe in the power of continuous learning and growth, constantly seeking new opportunities to expand my skills and push the boundaries of what's possible. Let's embark on this exciting adventure together, where creativity knows no bounds and innovation knows no limits!</p>
+  </div>
+  </section><br><br>
+  
+ <br><br> <section id="skills">
+    <h1>SKILLS</h1>
+    <div class="skills-container">
+      <div class="skill">
+        <img src="python.png" alt="Python">
+        <span>Python</span>
+      </div>
+      <div class="skill">
+        <img src="c.png" alt="C">
+        <span>C</span>
+      </div>
+      <div class="skill">
+        <img src="html.png" alt="HTML">
+        <span>HTML</span>
+      </div>
+      <div class="skill">
+        <img src="css.png" alt="CSS">
+        <span>CSS</span>
+      </div>
+      <div class="skill">
+        <img src="js.png" alt="JavaScript">
+        <span>JavaScript</span>
+      </div>
+    </div>
+  </section><br><br><br>
+  <h2 style="text-align: left;">PROJECTS</h2>
+  <section id="projects">
+    <div class="project">
+      <h2>Heart Failure Prediction System</h2>
+      <p>Heart failure is a critical health condition, and the ability to predict its occurrence can be a life-saving capability. Leveraging advanced data analytics and machine learning, the heart failure prediction system aims to forecast the likelihood of heart failure in patients. This enables healthcare professionals to take preventive measures and provide personalized care, ultimately improving patient outcomes and reducing the burden on healthcare systems.</p>
+      <img src="heartfailure.png" alt="Project 1">
+    </div>
+  </section>
+   <!-- Horizontal line added here -->
+  <h2 style="text-align: left;">ACHIEVEMENTS</h2>
+  <section id="achievements">
+    <div class="achievement">
+      <img src="ciscoc.jpg" alt="Certificate 1">
+      <p>T have earned my Cisco certification in Programming Essentials in C. </p>
+    </div>
+    <div class="achievement">
+      <img src="cicsop.jpg" alt="Certificate 2">
+      <p>I have received another certificate in Programming Essentials in Python from Cisco</p>
+    </div>
+    <div class="achievement">
+      <img src="nptel.jpg" alt="Certificate 3">
+      <p>I am glad to receive NPTEL certificate in Praogramming in Java</p>
+    </div>
+    <div class="achievement">
+      <img src="edx.jpg" alt="Certificate 3">
+      <p>This is my certificate from Edx in Data Science using Python</p>
+    </div>
+    
+    <!-- Add more certificates as needed -->
+  </section>
+   <!-- Another horizontal line added here -->
+  <h2 style="text-align: left;">RESUME</h2>
+  <section id="resume">
+    <a href="Haritha_resume.pdf" target="_blank" class="resume-button">View My Resume</a>
+  </section>
+  
+  <section id="contact">
+    <h2 style="text-align: left;">CONTACT ME</h2>
+    <p style="text-align:center;">Email: barmaharithasai@gmail.com</p>
+    <p style="text-align:center;">Phone: 9550964332</p>
+    <p style="text-align:center;">Linkedin:<a href=https://www.linkedin.com/in/haritha-sai-barama-6167a525b a>https://www.linkedin.com/in/haritha-sai-barama-6167a525b </a></p></section>
+  </section>
+  
+  <footer>
+    <p>&copy; 2024 Haritha Sai Barama . All rights reserved.</p>
+  </footer>
+</body>
+</html>
