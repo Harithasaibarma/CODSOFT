@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Tech Solutions</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #ECF0F1;
+            color: #2C3E50;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-color: #2C3E50;
+            color: #fff;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #18BC9C;
+        }
+
+        .hero {
+            background: url('https://images.unsplash.com/photo-1534622451572-c2e7f0171d20') no-repeat center center/cover;
+            text-align: center;
+            padding: 5rem 1rem;
+            color: black;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-family: 'Roboto', sans-serif;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1.2s forwards;
+        }
+
+        .btn {
+            background-color: #18BC9C;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-family: 'Roboto', sans-serif;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: gray;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            padding: 2rem 1rem;
+            background-color: #fff;
+        }
+
+        .feature {
+            text-align: center;
+            max-width: 300px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        .feature img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .feature img:hover {
+            transform: scale(1.05);
+        }
+
+        .about {
+            background-color: #fff;
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+
+        .about h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-family: 'Roboto', sans-serif;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        .about p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1.2s forwards;
+        }
+
+        .about img {
+            width: 80%;
+            height: auto;
+            border-radius: 10px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1.4s forwards;
+        }
+
+        .testimonials {
+            background-color: #f9f9f9;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .testimonials h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-family: 'Roboto', sans-serif;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        .testimonial {
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1.2s forwards;
+        }
+
+        .testimonial img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial p {
+            font-size: 1rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial h3 {
+            font-size: 1.25rem;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .cta {
+            background-color: #2C3E50;
+            color: #fff;
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-family: 'Roboto', sans-serif;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        .cta p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1.2s forwards;
+        }
+
+        .cta .btn {
+            margin-bottom: 2rem;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .contact-form input, .contact-form textarea {
+            padding: 0.75rem;
+            border: none;
+            border-radius: 5px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+        }
+
+        .contact-form button {
+            background-color: #18BC9C;
+            color: #fff;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 5px;
+            font-family: 'Roboto', sans-serif;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #148f77;
+        }
+
+        .footer {
+            background-color: #2C3E50;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .social-links {
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">ModernTech</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Innovative Tech Solutions</h1>
+        <p>Empowering your business with cutting-edge technology.</p>
+        <a href="#features" class="btn">Explore Features</a>
+    </section>
+
+    <section id="features" class="features">
+        <div class="feature">
+            <img src="https://images.unsplash.com/photo-1506765515384-028b60a970df" alt="Feature 1 Image">
+            <h2>Cloud Computing</h2>
+            <p>Leverage the power of cloud technology for scalable and secure solutions.</p>
+        </div>
+        <div class="feature">
+            <img src="https://images.unsplash.com/photo-1542831371-d531d36971e6" alt="Feature 2 Image">
+            <h2>AI & Machine Learning</h2>
+            <p>Integrate advanced AI capabilities to enhance your business operations.</p>
+        </div>
+        <div class="feature">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Feature 3 Image">
+            <h2>Cybersecurity</h2>
+            <p>Protect your data and infrastructure with our robust security solutions.</p>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>ModernTech is dedicated to delivering innovative technology solutions that drive business success. Our team of experts works tirelessly to stay ahead of the curve, ensuring our clients benefit from the latest advancements in technology.</p>
+        <img src="https://images.unsplash.com/photo-1519074002996-a69e7ac46a42" alt="About Us Image">
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonial">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2" alt="Customer 1">
+            <p>"ModernTech transformed our IT infrastructure, providing us with unparalleled service and support. Highly recommend!"</p>
+            <h3>John Doe</h3>
+        </div>
+        <div class="testimonial">
+            <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="Customer 2">
+            <p>"Their innovative solutions and proactive approach have been a game-changer for our business."</p>
+            <h3>Jane Smith</h3>
+        </div>
+    </section>
+
+    <section id="cta" class="cta">
+        <h2>Ready to Elevate Your Business?</h2>
+        <p>Contact us today to discover how our technology solutions can drive your business forward.</p>
+        <a href="#contact" class="btn">Contact Us</a><br><br><br>
+        <form action="https://formspree.io/YOUR_FORM_ID" method="POST" class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="2" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 ModernTech Solutions. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>
